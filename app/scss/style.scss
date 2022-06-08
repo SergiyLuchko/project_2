@@ -1,0 +1,82 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+.header {
+  background-color: #fff;
+  padding: 50px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.nav {
+  &__list {
+    display: flex;
+  }
+  &__item + .nav__item {
+    margin-left: 40px;
+  }
+  &__link {
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    color: #436372;
+  }
+}
+.user-nav {
+  display: flex;
+  justify-content: center;
+  &__box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__box-link {
+    position: relative;
+  }
+  &__box-number {
+    @extend %dmsans-400;
+    text-align: center;
+    font-size: 10px;
+    line-height: 16px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: -9px;
+    right: -9px;
+  }
+  &__link {
+    position: relative;
+    &--search,
+    &--catalog {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    &--search {
+      margin-right: 20px;
+      background-color: #edf1f4;
+    }
+    &--catalog {
+      margin-left: 20px;
+      background-color: #a3bbc8;
+    }
+  }
+  &__img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__box {
+    width: 175px;
+    background-color: #fcd7b6;
+    border-radius: 25px;
+  }
+}
+
+@import "media";
