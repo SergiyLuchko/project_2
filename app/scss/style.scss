@@ -353,4 +353,122 @@
     color: #585858;
   }
 }
+.products {
+  padding-top: 70px;
+  padding-bottom: 180px;
+  &__title {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+}
+.tabs {
+  &__nav {
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+  }
+  &__nav-item + .tabs__nav-item {
+    margin-left: 30px;
+  }
+
+  &__nav-btn {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #8b8b8b;
+    &--active {
+      color: $title-color;
+    }
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    place-items: center;
+  }
+  &__panel {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    max-width: 270px;
+    min-height: 380px;
+    padding: 30px 60px 38px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+    &:hover .tabs__user {
+      opacity: 1;
+    }
+  }
+  &__panel-title,
+  &__panel-price {
+    @extend %dmsans-500;
+    font-size: 16px;
+    line-height: 40px;
+    color: #234969;
+  }
+  &__panel-price {
+    color: #a3bbc8;
+  }
+  &__img {
+    margin-bottom: auto;
+  }
+  &__user {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    transition: $transition;
+  }
+  &__user-link {
+    background-color: #fff;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+  &__user-link svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: #a3bbc8;
+  }
+  &__user-link {
+    transition: $transition;
+    &:nth-child(2) {
+      background-color: #a3bbc8;
+      &:hover {
+        background-color: #fff;
+      }
+    }
+    &:nth-child(2):hover.tabs__user-link svg {
+      fill: #a3bbc8;
+    }
+    &:nth-child(2) svg {
+      fill: #fff;
+    }
+    &:hover {
+      background-color: #a3bac7;
+    }
+    &:hover.tabs__user-link svg {
+      fill: #fff;
+    }
+  }
+}
+
 @import "media";
