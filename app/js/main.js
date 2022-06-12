@@ -5,4 +5,6 @@ $('.hero__slider-items').slick({
   autoplay:true,
   fade:true
 });
+var mixer = mixitup('.tabs');
+var mixer = mixitup('.design__tabs');
 });
