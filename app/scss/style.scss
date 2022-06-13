@@ -365,7 +365,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    place-items: center;
+    // place-items: center;
   }
   &__img {
     margin-bottom: auto;
@@ -494,11 +494,11 @@
   }
   &__img {
     position: absolute;
-    left: 80px;
+    left: 40px;
     top: -100px;
   }
   &__info {
-    max-width: 320px;
+    max-width: 360px;
     margin-left: auto;
   }
   &__title {
@@ -560,6 +560,100 @@
   &__panel-decr {
     @extend %dmsans-700;
     color: #a3bbc8;
+  }
+}
+.popup {
+  background-image: url("../images/popup-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 100px;
+  &__inner {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.articles {
+  background: #fff;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &__link {
+    @extend %dmsans-700;
+    color: $title-color;
+    padding: 5px 15px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/icons/articles-arrow.svg");
+      background-repeat: no-repeat;
+      width: 6px;
+      height: 11px;
+      right: 0;
+      top: 12px;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 5px;
+  }
+  &__list-img {
+    margin-bottom: 40px;
+  }
+  &__list-text {
+    width: 290px;
+    padding: 0 15px;
+    margin-bottom: 20px;
+    @extend %dmsans-500;
+    font-size: 18px;
+    color: $title-color;
+  }
+  &__list-date {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: auto;
+    border-top: 1px solid #e0e0e0;
+    @extend %rubik-400;
+    font-size: 12px;
+    line-height: 30px;
+    color: #222933;
+  }
+  &__list-author {
+    margin-left: 25px;
+  }
+}
+.partners {
+  min-height: 430px;
+  background-color: #fef7f0;
+  margin-top: -200px;
+  position: relative;
+
+  &__box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: -200px;
+    bottom: -380px;
+    left: 0;
+    right: 0;
   }
 }
 
