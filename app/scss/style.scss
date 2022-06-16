@@ -660,5 +660,244 @@
     right: 0;
   }
 }
+.mission {
+  padding: 110px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__image {
+    margin-right: 30px;
+  }
+  &__content {
+    max-width: 570px;
+    padding: 85px 0 90px;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__info-num {
+    @extend %rubik-700;
+    font-size: 140px;
+    line-height: 32px;
+    color: #a3bbc8;
+    margin-right: 30px;
+  }
+  &__info-box {
+    margin-top: 20px;
+  }
+  &__info-text,
+  &__descr {
+    @extend %rubik-400;
+    line-height: 30px;
+    color: $default-color;
+  }
+  &__title {
+    padding-bottom: 40px;
+    color: $default-color;
+  }
+  &__descr {
+    padding-bottom: 40px;
+    margin-bottom: 35px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 500px;
+      left: 0;
+      bottom: 0;
+      background-color: #ebeef3;
+    }
+  }
+  &__list {
+    max-width: 520px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    display: flex;
+    padding-right: 25px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 1px;
+      height: 80px;
+      background-color: #e6eaf0;
+    }
+    &:last-child {
+      padding-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__item-icon {
+    margin-right: 20px;
+  }
+  &__item-box {
+  }
+  &__item-num {
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 38px;
+    color: $default-color;
+    margin-bottom: 5px;
+  }
+  &__item-text {
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 17px;
+    color: #4c4c4c;
+  }
+}
+.achievement {
+  padding: 80px 0;
+  background-color: #fcd7b6;
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+  &__img {
+    width: 64px;
+    height: 57px;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 26px;
+      right: 40px;
+
+      border-radius: 50%;
+      background-color: rgba(163, 187, 200, 0.8);
+      width: 35px;
+      height: 35px;
+    }
+  }
+  &__num {
+    margin-bottom: 20px;
+  }
+  &__num,
+  &__text {
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 32px;
+    color: $default-color;
+  }
+  &__text {
+    font-size: 18px;
+  }
+}
+.team {
+  padding: 120px 150px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
+    max-width: 300px;
+  }
+  &__title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 32px;
+    color: $default-color;
+    margin-bottom: 30px;
+  }
+  &__text {
+    @extend %rubik-400;
+    line-height: 30px;
+    color: $default-color;
+    margin-bottom: 40px;
+  }
+  &__link {
+    @extend %rubik-400;
+    font-size: 15px;
+    line-height: 55px;
+    color: #fff;
+    background-color: #a3bbc8;
+    border-radius: 5px;
+    padding: 20px 60px 20px 25px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      width: 15px;
+      height: 11px;
+      background-image: url("../images/icons/team-arrow.svg");
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px 30px;
+  }
+  &__item {
+    position: relative;
+  }
+  &__box {
+    background-color: #fff;
+    position: absolute;
+    padding: 15px 0px 30px 25px;
+    width: 320px;
+    height: 110px;
+    bottom: -50px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__box-name {
+    @extend %dmsans-700;
+    font-size: 22px;
+    color: #436372;
+  }
+  &__box-position {
+    @extend %rubik-400;
+    line-height: 30px;
+    color: #565872;
+  }
+  &__box-social {
+    display: flex;
+  }
+  &__box-icon {
+    z-index: 1;
+    position: relative;
+  }
+  &__box-link {
+    margin-right: 30px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background-color: #f6f6f6;
+      width: 41px;
+      height: 41px;
+      top: -12px;
+      left: -11px;
+    }
+  }
+}
 
 @import "media";
+// border-radius: 50%;
+// background-color: #f6f6f6;
+// width: 41px;
+// height: 41px;
