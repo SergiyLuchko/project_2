@@ -36,3 +36,44 @@ a {
   line-height: 54px;
   color: $title-color;
 }
+.breadcrumbs {
+  padding: 30px 0 35px;
+  background-color: #edf1f4;
+  text-align: center;
+  &__title {
+    @extend %rubik-300;
+    font-size: 36px;
+    line-height: 24px;
+    color: #222933;
+    margin-bottom: 10px;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    @extend %rubik-400;
+    padding-right: 20px;
+    position: relative;
+    color: #222933;
+    &::after {
+      content: "/";
+      right: 7px;
+      top: 0;
+      color: #c2c6c9;
+      position: absolute;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    &:last-child::after {
+      display: none;
+      padding-right: 0;
+    }
+  }
+  &__link {
+    font-size: 14px;
+    line-height: 24px;
+    color: #c2c6c9;
+  }
+}
