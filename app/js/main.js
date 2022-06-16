@@ -1,5 +1,6 @@
 $(function(){
-  $('.venobox').venobox();
+
+  
 $('.hero__slider-items').slick({
   arrows:false,
   dots:true,
@@ -7,8 +8,10 @@ $('.hero__slider-items').slick({
   fade:true
 });
 
-
 var mixer = mixitup('.tabs');
 var mixer = mixitup('.design__tabs');
 
+});
+$(function(){
+  require('fslightbox');
 });
