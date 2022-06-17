@@ -616,6 +616,9 @@
     background-color: #fff;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     border-radius: 5px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
   &__list-box {
     padding: 35px 25px;
@@ -628,6 +631,24 @@
     margin-bottom: 20px;
     display: inline-block;
   }
+  &__list-link {
+    position: relative;
+    &::before {
+      content: "news";
+      position: absolute;
+      bottom: -15px;
+      left: 30px;
+      @extend %dmsans-700;
+      color: #fff;
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: uppercase;
+      background-color: #a3bbc8;
+      border-radius: 15px;
+      padding: 5px 25px;
+    }
+  }
+
   &__list-info {
     padding-top: 15px;
     border-top: 1px solid #e0e0e0;
@@ -895,9 +916,45 @@
     }
   }
 }
+.accordion {
+  padding: 110px 0;
+  &__btn {
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    text-align-last: left;
+    @extend %rubik-500;
+    font-size: 24px;
+    line-height: 40px;
+    color: $default-color;
+    margin-bottom: 35px;
+    cursor: pointer;
+  }
+  &__list {
+    counter-reset: num;
+    display: none;
+    &:not(:last-child) {
+      margin-bottom: 70px;
+    }
+  }
+  &__item {
+    counter-increment: num;
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $default-color;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+
+    &::before {
+      content: "0" counter(num) ".";
+      margin-right: 15px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}
 
 @import "media";
-// border-radius: 50%;
-// background-color: #f6f6f6;
-// width: 41px;
-// height: 41px;
