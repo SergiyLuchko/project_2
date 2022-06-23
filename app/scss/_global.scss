@@ -77,3 +77,25 @@ a {
     color: #c2c6c9;
   }
 }
+.pagination {
+  text-align: center;
+  &__link {
+    display: inline-block;
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $default-color;
+    padding: 8px 15px;
+    border: 1px solid #a3bbc8;
+    transition: $transition;
+
+    &:hover,
+    &--active {
+      background-color: #a3bbc8;
+      color: #fff;
+    }
+  }
+  &__link + .pagination__link {
+    margin-left: 15px;
+  }
+}

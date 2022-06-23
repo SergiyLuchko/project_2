@@ -1,5 +1,18 @@
 $(function(){
 
+  $(".shop-price__input").ionRangeSlider({
+    type: "double",
+    prefix:"$",
+       
+  });
+
+  $(".star").rateYo({
+    rating: 3.6,
+    starWidth:"15px",
+    readOnly: true,
+    normalFill: "#dbdbdb",
+    ratedFill:'#ffcc00',
+  });
   
 $('.hero__slider-items').slick({
   arrows:false,
