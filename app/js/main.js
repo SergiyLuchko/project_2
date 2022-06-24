@@ -1,5 +1,15 @@
 $(function(){
 
+
+  $('.shop-category__label').on('click', function(){
+    
+    $('.products__panel').toggleClass('products__panel--list')
+   
+
+
+    });
+
+
   $(".shop-price__input").ionRangeSlider({
     type: "double",
     prefix:"$",
@@ -12,6 +22,7 @@ $(function(){
     readOnly: true,
     normalFill: "#dbdbdb",
     ratedFill:'#ffcc00',
+    spacing: "10px"
   });
   
 $('.hero__slider-items').slick({
@@ -42,6 +53,4 @@ var mixer = mixitup('.design__tabs');
 });
 $(function(){
   require('fslightbox');
-  
-  
-});
+  });

@@ -351,6 +351,9 @@
     color: #585858;
   }
 }
+.star {
+  display: none;
+}
 .products {
   padding-top: 70px;
   padding-bottom: 100px;
@@ -381,7 +384,9 @@
   &__panel-price {
     color: #a3bbc8;
   }
-
+  &__panel-descr {
+    display: none;
+  }
   &__panel {
     display: flex;
     flex-direction: column;
@@ -389,13 +394,74 @@
     text-align: center;
     border-radius: 10px;
     background-color: #fff;
-    max-width: 270px;
+    width: 270px;
     min-height: 380px;
     padding: 30px 60px 38px;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-
     &:hover .products__user {
       opacity: 1;
+    }
+    &__panel-descr {
+      display: none;
+    }
+    &.products__panel--list {
+      width: 100%;
+      min-height: 500px;
+      flex-direction: row;
+      padding: 0;
+      box-shadow: none;
+      position: relative;
+
+      .products__img {
+        width: 370px;
+        min-height: 100%;
+        margin-right: 60px;
+        border: 2px solid #f2f2f2;
+        background-color: #fefefe;
+        object-fit: contain;
+      }
+      .products__user {
+        top: 75%;
+        left: 12%;
+        opacity: 1;
+      }
+      .products__user-link {
+        width: 50px;
+        height: 50px;
+        border-radius: 0;
+        &:first-child {
+          display: none;
+        }
+      }
+      .products__panel-descr {
+        display: block;
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 30px;
+        color: $default-color;
+        margin-bottom: 30px;
+      }
+      .products__panel-box {
+        text-align: left;
+        padding-top: 80px;
+        padding-bottom: 70px;
+      }
+      .products__panel-title {
+        @extend %rubik-400;
+        font-size: 40px;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      .star {
+        display: block;
+        margin-bottom: 30px;
+      }
+      .products__panel-price {
+        @extend %rubik-400;
+        font-size: 30px;
+        color: #333;
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -1246,15 +1312,21 @@
   }
   &__star {
     margin: 10px 0;
+    display: block;
   }
   &__price {
     line-height: 27px;
   }
 }
 .shop-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px 30px;
+  width: 100%;
   margin-bottom: 100px;
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    .products__panel {
+      margin-bottom: 40px;
+    }
+  }
 }
 @import "media";
