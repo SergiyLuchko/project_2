@@ -1941,4 +1941,135 @@
     cursor: pointer;
   }
 }
+.contacts {
+  padding: 120px 0;
+  &__title {
+    text-align: center;
+    @extend %dmsans-700;
+    font-size: 35px;
+    color: #436372;
+    margin-bottom: 70px;
+    span {
+      display: block;
+      @extend %dmsans-400;
+      font-size: 16px;
+      line-height: 20xp;
+      color: #a3bbc8;
+    }
+  }
+  &__info-list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 120px;
+  }
+  &__info-item {
+    max-width: 370px;
+    width: 100%;
+    padding: 70px 50px 80px;
+    background-color: #fbfbfb;
+    border: 2px solid transparent;
+    transition: $transition;
+    & + .contacts__info-item {
+      margin-left: 30px;
+    }
+    &:hover {
+      border: 2px solid #a3bbc8;
+      .contacts__info-icon {
+        background-color: #a3bbc8;
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  &__info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 60px;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    svg {
+      fill: #a3bbc8;
+    }
+  }
+  &__info-subtitle {
+    @extend %dmsans-700;
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  &__info-link {
+    @extend %rubik-400;
+    font-size: 16px;
+    color: #565872;
+    display: block;
+  }
+}
+.contacts-content {
+  display: flex;
+  justify-content: space-between;
+  &__form {
+    width: 620px;
+    margin-right: 50px;
+  }
+  &__input {
+    border: none;
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 15px 35px 20px 20px;
+    background-color: #fafafa;
+
+    background-image: url("../images/icons/form-user.svg");
+    background-repeat: no-repeat;
+    background-position: 92% 43%;
+
+    & + .contacts-content__input {
+      margin-left: 15px;
+    }
+    &.contacts-content__input--mail {
+      background-image: url("../images/icons/form-mail.svg");
+    }
+  }
+
+  &__textarea::placeholder,
+  &__input::placeholder {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #565872;
+  }
+  &__textarea {
+    display: block;
+    resize: none;
+    border: none;
+    background-color: #fafafa;
+    width: 100%;
+    height: 170px;
+    margin-bottom: 30px;
+    padding: 15px 50px 20px 20px;
+    background-image: url("../images/icons/form-message.svg");
+    background-repeat: no-repeat;
+    background-position: 96% 10%;
+  }
+  &__btn {
+    border: none;
+    border-radius: 5px;
+    background-color: #a3bbc8;
+    color: #fff;
+    padding: 10px 47px;
+    cursor: pointer;
+  }
+  #map {
+    height: 330px;
+    width: 500px;
+  }
+}
 @import "media";
