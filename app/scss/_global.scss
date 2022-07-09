@@ -110,4 +110,15 @@ a {
     font-size: 24px;
     line-height: 36px;
   }
+  .breadcrumbs {
+    &__title {
+      font-size: 28px;
+    }
+    &__list {
+      flex-wrap: wrap;
+    }
+    &__item {
+      margin-bottom: 5px;
+    }
+  }
 }

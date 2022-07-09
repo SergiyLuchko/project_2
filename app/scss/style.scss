@@ -886,8 +886,7 @@
   &__item-icon {
     margin-right: 20px;
   }
-  &__item-box {
-  }
+
   &__item-num {
     @extend %dmsans-700;
     font-size: 36px;
@@ -1047,7 +1046,7 @@
     border: none;
     width: 100%;
     background-color: transparent;
-    text-align-last: left;
+    text-align: left;
     @extend %rubik-500;
     font-size: 24px;
     line-height: 40px;
@@ -1204,8 +1203,6 @@
   }
 }
 .shop-category {
-  &__inner {
-  }
   &__box {
     &:not(:last-child) {
       margin-bottom: 10px;
