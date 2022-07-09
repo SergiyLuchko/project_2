@@ -852,7 +852,7 @@
       content: "";
       position: absolute;
       height: 2px;
-      width: 500px;
+      width: 100%;
       left: 0;
       bottom: 0;
       background-color: #ebeef3;
@@ -948,7 +948,7 @@
   }
 }
 .team {
-  padding: 120px 150px;
+  padding: 120px 0;
   &__inner {
     display: flex;
     justify-content: space-between;
