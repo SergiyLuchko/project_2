@@ -5,6 +5,10 @@ $('.burger').on('click', function(){
     $('.nav__list').toggleClass('nav__list--active')
    
 });
+$('.shop-content__filter-btn').on('click', function(){
+    $('.shop-filter').toggleClass('shop-filter--active')
+   
+});
 
 
       
@@ -23,6 +27,7 @@ $($(this).attr('href')).addClass('details-tabs__content-item--active')
 $('.details__number').styler();
   $('.shop-category__label').on('click', function(){
       $('.products__panel').toggleClass('products__panel--list')
+      $('.shop-content__inner').toggleClass('shop-content__nogrid')
      });
 
 

@@ -1370,12 +1370,32 @@
 .shop-content {
   width: 100%;
   margin-bottom: 100px;
+  position: relative;
   &__inner {
     display: flex;
     flex-wrap: wrap;
     .products__panel {
       margin-bottom: 40px;
+      margin-right: 20px;
     }
+  }
+  &__filter-btn {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: fixed;
+    background-color: $default-color;
+    right: 25px;
+    bottom: 50px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
   }
 }
 .details {

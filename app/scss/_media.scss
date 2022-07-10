@@ -62,6 +62,30 @@
   .blog-recent {
     display: none;
   }
+  .shop-content {
+    &__inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    &__nogrid {
+      display: flex;
+    }
+    &__filter-btn {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+  .shop-filter {
+    position: absolute;
+    transform: translateX(-200%);
+    transition: $transition;
+    &.shop-filter--active {
+      transform: translateX(0%);
+      z-index: 10;
+      background-color: #fff;
+    }
+  }
 }
 @media (max-width: 1170px) {
   .hero-bottom {
@@ -246,6 +270,16 @@
       margin-left: 0;
     }
   }
+  .shop-content {
+    &__inner {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .shop-content {
+    &__nogrid {
+      display: none;
+    }
+  }
 }
 @media (max-width: 768px) {
   .design {
@@ -317,7 +351,8 @@
   .accordion,
   .contacts,
   .team,
-  .blog {
+  .blog,
+  .shop {
     padding: 60px 0;
   }
   .products {
@@ -431,6 +466,11 @@
     &__info {
       margin-bottom: 10px;
       margin-right: 20px;
+    }
+  }
+  .shop-content {
+    &__inner {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
