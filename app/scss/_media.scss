@@ -38,6 +38,30 @@
       margin-left: 0;
     }
   }
+  .blog {
+    &__inner {
+      flex-wrap: wrap;
+    }
+    .shop-filter__item {
+      display: none;
+    }
+    &__aside {
+      order: -1;
+      width: 100%;
+    }
+    &__content {
+      width: 100%;
+      margin-right: 0;
+    }
+    &__img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .blog-recent {
+    display: none;
+  }
 }
 @media (max-width: 1170px) {
   .hero-bottom {
@@ -390,6 +414,11 @@
       margin: 10px 40px;
     }
   }
+  .blog {
+    &__img {
+      height: 200px;
+    }
+  }
 }
 @media (max-width: 420px) {
   .hero {
@@ -408,11 +437,22 @@
       padding-left: 10px;
     }
   }
+  .blog {
+    &__title {
+      // max-width: 315px;
+      margin-bottom: 15px;
+    }
+  }
 }
 @media (max-width: 375px) {
   .team {
     &__box {
       width: 283px;
+    }
+  }
+  .blog {
+    &__info {
+      padding: 20px;
     }
   }
 }
