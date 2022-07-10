@@ -1939,7 +1939,7 @@
     background-image: url(../images/icons/comment-user.svg);
     background-repeat: no-repeat;
     background-size: 18px 12px;
-    background-position: 362px 18px;
+    background-position: calc(100% - 18px) 18px;
     & + .comments__form-input {
       margin-left: 25px;
     }
@@ -1947,12 +1947,12 @@
       background-image: url(../images/icons/comment-mail.svg);
       background-repeat: no-repeat;
       background-size: 18px 12px;
-      background-position: 362px 18px;
+      background-position: calc(100% - 18px) 18px;
     }
   }
   &__form-textarea {
     display: block;
-    width: 100%;
+    width: 830px;
     border: 1px solid #e5e5e5;
     resize: none;
     margin-bottom: 30px;
