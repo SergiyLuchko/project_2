@@ -130,6 +130,17 @@
       width: 100%;
     }
   }
+  .details-slider {
+    &__thumbs {
+      display: none;
+    }
+  }
+  .related-slider {
+    .products__img {
+      height: 200px;
+      object-fit: scale-down;
+    }
+  }
 }
 @media (max-width: 1050px) {
   .submenu {
@@ -281,6 +292,18 @@
     }
   }
 }
+@media (max-width: 860px) {
+  .details {
+    &__inner {
+      display: block;
+      margin-bottom: 40px;
+    }
+    &__content {
+      width: 100%;
+      clear: both;
+    }
+  }
+}
 @media (max-width: 768px) {
   .design {
     &__content {
@@ -352,7 +375,8 @@
   .contacts,
   .team,
   .blog,
-  .shop {
+  .shop,
+  .details {
     padding: 60px 0;
   }
   .products {
@@ -473,6 +497,18 @@
       grid-template-columns: repeat(1, 1fr);
     }
   }
+  .details-tabs {
+    &__btns {
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+    &__btn {
+      margin-bottom: 10px;
+    }
+    .details-tabs__btn + .details-tabs__btn {
+      margin-left: 0;
+    }
+  }
 }
 @media (max-width: 500px) {
   .achievement {
@@ -496,6 +532,16 @@
       margin-bottom: 30px;
     }
   }
+  .details {
+    &__btn {
+      display: block;
+      margin: 20px 0;
+    }
+  }
+  .related-slider__inner .slick-prev,
+  .related-slider__inner .slick-next {
+    top: -80px;
+  }
 }
 @media (max-width: 420px) {
   .hero {
@@ -516,8 +562,12 @@
   }
   .blog {
     &__title {
-      // max-width: 315px;
       margin-bottom: 15px;
+    }
+  }
+  .details-slider {
+    &__big {
+      width: 279px;
     }
   }
 }
